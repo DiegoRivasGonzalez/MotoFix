@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>MotoFix</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/motocicleta.png" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand text-primary" href="index.html">MotoFix</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead1">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Revisa tu pedido</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 mb-5" style="font-size: 1.5rem;">Revisa tu pedido antes de realizar el pago comprueba que esta correcto y que no te falta nada.</p>
+                    <a href="tienda.html" class="btn btn-primary btn-xl"><i class="bi-cart-fill me-2"></i>Explora el catálogo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrito -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Tu Carrito</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body">
+                    <!-- Items del carrito -->
+                </tbody>
+            </table>
+            <div class="text-end">
+                <h5 id="carrito-total">Total: 0,00 €</h5>
+                <button class="btn btn-success" onclick="window.location.href='pedido.html'">Finalizar Compra</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <h5>MotoFix</h5>
+                    <p>Tienda y taller de motos en Catarroja, Valencia. Pasión por el motor y servicio de calidad.</p>
+                </div>
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <h5>Contacto</h5>
+                    <p><i class="bi-phone"></i> +34 961 234 567</p>
+                    <p><i class="bi-envelope"></i> info@motofix.es</p>
+                    <p><i class="bi-geo-alt"></i> C.Las Cortes 12, Catarroja, Valencia</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5>Síguenos</h5>
+                    <a href="https://www.facebook.com/" class="text-white me-3"><i class="bi-facebook fs-4"></i></a>
+                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi-instagram fs-4"></i></a>
+                    <a href="https://x.com/" class="text-white"><i class="bi-twitter fs-4"></i></a>
+                </div>
+            </div>
+            <hr class="my-4 text-white-50" />
+        </div>
+    </footer>
+
+    <script>
+        const productos = [
+            { nombre: "Casco Integral Shark", precio: 129.99, imagen: "casco1.webp" },
+            { nombre: "Guantes Alpinestars", precio: 59.99, imagen: "guantes.webp" },
+            { nombre: "Soporte para Móvil", precio: 24.99, imagen: "soporte.webp" },
+            { nombre: "Chaqueta Touring", precio: 199.99, imagen: "chaqueta.png" },
+            { nombre: "Luces LED", precio: 39.99, imagen: "led.png" },
+            { nombre: "Mochila Impermeable", precio: 49.99, imagen: "mochila.png" }
+        ];
+
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        function renderCarrito() {
+            const cuerpo = document.getElementById("carrito-body");
+            cuerpo.innerHTML = "";
+            let total = 0;
+            carrito.forEach((p, i) => {
+                const subtotal = p.precio * p.cantidad;
+                total += subtotal;
+                const fila = document.createElement("tr");
+                fila.innerHTML = `
+                    <td>${p.nombre}</td>
+                    <td>${p.precio.toFixed(2)} €</td>
+                    <td>
+                        <input type="number" value="${p.cantidad}" min="1" class="form-control form-control-sm" style="width:80px"
+                            onchange="actualizarCantidad(${i}, this.value)">
+                    </td>
+                    <td>${subtotal.toFixed(2)} €</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${i})">Eliminar</button>
+                    </td>
+                `;
+                cuerpo.appendChild(fila);
+            });
+            document.getElementById("carrito-total").innerText = `Total: ${total.toFixed(2)} €`;
+        }
+
+        function actualizarCantidad(index, nuevaCantidad) {
+            carrito[index].cantidad = parseInt(nuevaCantidad);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            renderCarrito();
+        }
+
+        function eliminarDelCarrito(index) {
+            carrito.splice(index, 1);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            renderCarrito();
+        }
+
+        renderCarrito();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (si no lo tienes ya importado) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+</body>
+</body>
+
+</html>
